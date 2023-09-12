@@ -1,0 +1,35 @@
+name = "rhel-9.2-microshift-4.13"
+description = "RHEL 9.2 with MicroShift 4.13 installed."
+version = "0.0.1"
+modules = []
+groups = []
+distro = "rhel-92"
+
+[[packages]]
+name = "microshift"
+version = "4.13*"
+
+[[packages]]
+name = "microshift-greenboot"
+version = "4.13*"
+
+[[packages]]
+name = "microshift-networking"
+version = "4.13*"
+
+[[packages]]
+name = "microshift-selinux"
+version = "4.13*"
+
+[customizations.services]
+enabled = ["microshift"]
+
+[customizations.firewall]
+ports = ["22:tcp", "80:tcp", "443:tcp", "5353:udp", "6443:tcp", "30000-32767:tcp", "30000-32767:udp"]
+
+[customizations.firewall.services]
+enabled = ["mdns", "ssh", "http", "https"]
+
+[[customizations.firewall.zones]]
+name = "trusted"
+sources = ["10.42.0.0/16", "169.254.169.1"]

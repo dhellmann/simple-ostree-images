@@ -1,0 +1,4 @@
+compose.json
+*.tar
+nginx*
+repo
