@@ -44,6 +44,6 @@ tar -xf "${build_id}-commit.tar"
 ostree summary --update --repo=repo
 
 # Create the alias for step 1
-ostree refs --repo=repo rhel/9.2/x86_64/edge --create=step1 --alias --force
+ostree refs --repo=repo rhel/9.2/x86_64/edge --create=step1 --force
 
 ./show.sh

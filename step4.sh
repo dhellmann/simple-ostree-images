@@ -48,7 +48,7 @@ sudo chown -R "$(whoami)". *.tar
 tar -xf "${build_id}-commit.tar"
 
 # Create the alias for step 3
-ostree refs --repo=repo rhel/9.2/x86_64/edge-ms --create=step4 --alias --force
+ostree refs --repo=repo rhel/9.2/x86_64/edge-ms --create=step4 --force
 
 # Update the metadata in the repo
 ostree summary --update --repo=repo
