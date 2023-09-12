@@ -34,11 +34,11 @@ sudo composer-cli sources add rhocp-4.13.toml
 
 # Build an image with MicroShift 4.13
 sudo composer-cli blueprints push rhel92-ms413-2.toml
-sudo composer-cli blueprints depsolve rhel-9.2-microshift-4.13-2
+sudo composer-cli blueprints depsolve rhel-9.2-microshift-4.13
 build_id=$(sudo composer-cli compose start-ostree \
                 --ref rhel/9.2/x86_64/edge-ms \
                 --url http://localhost:8080/repo \
-                rhel-9.2-microshift-4.13-2 \
+                rhel-9.2-microshift-4.13 \
                 edge-commit | awk '{print $2}')
 waitfor_image "${build_id}"
 
