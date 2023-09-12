@@ -17,4 +17,8 @@ ostree refs --repo=repo --list --revision
 for ref in $(ostree refs --repo=repo --list); do
     title "ostree log ${ref}"
     ostree log --repo=repo "${ref}"
+
+    # List the contents of the image
+    title "ostree ls ${ref}"
+    ostree ls --repo=repo "${ref}"
 done

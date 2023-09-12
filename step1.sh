@@ -46,7 +46,4 @@ ostree summary --update --repo=repo
 # Create the alias for step 1
 ostree refs --repo=repo rhel/9.2/x86_64/edge --create=step1 --alias --force
 
-# List the contents of the image
-ostree ls --repo=repo rhel/9.2/x86_64/edge
-
 ./show.sh
