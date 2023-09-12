@@ -56,8 +56,7 @@ ostree summary --update --repo=repo
 # Create the alias for step 3
 ostree refs --repo=repo rhel/9.2/x86_64/edge-ms --create=step3 --alias --force
 
-# Show the summary of the repo
-ostree summary --view --repo=repo
-
 # List the contents of the image
 ostree ls --repo=repo rhel/9.2/x86_64/edge-ms
+
+./show.sh
